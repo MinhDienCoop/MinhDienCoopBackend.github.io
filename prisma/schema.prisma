@@ -10,6 +10,12 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model Brand {
+  id      String  @id @default(auto()) @map("_id") @db.ObjectId
+  Logo    String
+  Favicon String
+  Logo2   String?
+}
 
 model User {
   id    String @id @default(auto()) @map("_id") @db.ObjectId
